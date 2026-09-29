@@ -1,0 +1,372 @@
+.cv {
+    width: min(100%, 1080px);
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #f6f1e8;
+    box-shadow: 0 12px 35px #2632381c;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.cv.dark {
+    background: #19323c;
+    color: #e5ecee;
+}
+
+header {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 3.5rem clamp(1.5rem, 6vw, 5rem);
+    background: #19323c;
+    color: #f6f1e8;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.cv.dark header {
+    background: #f6f1e8;
+    color: #19323c;
+}
+
+.dark-mode {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #f6f1e8;
+    border-radius: 50%;
+    background: transparent;
+    color: #f6f1e8;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.dark-mode:hover,
+.dark-mode:focus-visible {
+    background: #ffffff1f;
+}
+
+.dark-mode:focus-visible {
+    outline: 3px solid #e9b872;
+    outline-offset: 3px;
+}
+
+.cv.dark .dark-mode {
+    border-color: #19323c;
+    color: #19323c;
+}
+
+.cv.dark .dark-mode:hover,
+.cv.dark .dark-mode:focus-visible {
+    background: #19323c1f;
+}
+
+header img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border: 6px solid #e9b872;
+    border-radius: 50%;
+}
+
+.cv.dark header img {
+    border-color: #e06c47;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font: 700 clamp(2rem, 5vw, 3.8rem)/1.05 Georgia, serif;
+}
+
+.cv.dark header h1 {
+    color: #19323c;
+}
+
+header h2 {
+    margin: .6rem 0 1rem;
+    color: #e9b872;
+    font-size: 1.15rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: .25rem 0;
+}
+
+header a {
+    color: #e9b872;
+    text-decoration: none;
+    transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+header a:hover,
+header a:focus-visible {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+header a:focus-visible {
+    outline: 2px solid #e9b872;
+    outline-offset: 4px;
+}
+
+.cv.dark header a {
+    color: #e06c47;
+}
+
+.cv.dark header a:hover,
+.cv.dark header a:focus-visible {
+    color: #19323c;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem 1.5rem;
+    padding: .9rem clamp(1.5rem, 6vw, 5rem);
+    background: #e06c47;
+}
+
+.main-nav a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    color: #19323c;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.main-nav a:focus-visible {
+    outline: 2px solid #19323c;
+    outline-offset: 4px;
+}
+
+.cv.dark .main-nav {
+    background: #e9b872;
+}
+
+.cv-content {
+    padding: 2.5rem clamp(1.5rem, 6vw, 5rem);
+}
+
+.projects-toggle {
+    margin: 0 0 2rem;
+    padding: .7rem 1.1rem;
+    border: 0;
+    border-radius: 4px;
+    background: #e06c47;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.projects-toggle:hover {
+    background: #c95534;
+}
+
+.projects-toggle:focus-visible {
+    outline: 3px solid #e9b872;
+    outline-offset: 3px;
+}
+
+.projects {
+    margin-bottom: 2.5rem;
+    padding: 1.3rem 1.5rem;
+    border-left: 4px solid #e9b872;
+    background: #f4f7f7;
+}
+
+.cv.dark .projects {
+    background: #24343a;
+}
+
+.projects h2 {
+    margin-bottom: .5rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+section h1,
+section h2 {
+    margin: 0 0 1rem;
+    color: #19323c;
+    font-family: Georgia, serif;
+}
+
+.cv.dark section h1,
+.cv.dark section h2,
+.cv.dark section h3 {
+    color: #e9b872;
+}
+
+section h1 {
+    font-size: 2rem;
+}
+
+section h2 {
+    padding-bottom: .55rem;
+    border-bottom: 3px solid #e9b872;
+    font-size: 1.45rem;
+}
+
+section h3 {
+    margin: 1.25rem 0 .2rem;
+    color: #19323c;
+}
+
+section p {
+    line-height: 1.65;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 3rem;
+}
+
+.cv-column>section:last-child {
+    margin-bottom: 0;
+}
+
+.skill {
+    margin: 1rem 0;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.progress {
+    height: 8px;
+    margin-top: .4rem;
+    overflow: hidden;
+    background: #e9eef0;
+    border-radius: 999px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #e06c47;
+    border-radius: inherit;
+}
+
+footer {
+    padding: 1.4rem;
+    text-align: center;
+    background: #e9eef0;
+    color: #53646b;
+    font-size: .85rem;
+}
+
+.cv.dark footer {
+    background: #10191d;
+    color: #b9c5c8;
+}
+
+.download {
+    padding: 0 clamp(1.5rem, 6vw, 5rem) 2rem;
+    text-align: center;
+}
+
+.download button {
+    padding: .7rem 1.1rem;
+    border: 0;
+    border-radius: 4px;
+    background: #e06c47;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+.download button:hover {
+    background: #c95534;
+}
+
+.download button:focus-visible {
+    outline: 3px solid #e9b872;
+    outline-offset: 3px;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 680px) {
+    .main-nav {
+        gap: .65rem 1rem;
+        padding: .85rem 1rem;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 5rem 1.25rem 2.5rem;
+        text-align: center;
+    }
+
+    header img {
+        width: min(42vw, 135px);
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    header h1 {
+        font-size: clamp(2rem, 11vw, 3rem);
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .cv-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .cv-content {
+        padding-right: 1.25rem;
+        padding-top: 2rem;
+        padding-left: 1.25rem;
+    }
+
+    .dark-mode {
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .cv {
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+    }
+
+    .dark-mode,
+    .projects-toggle,
+    .download {
+        display: none;
+    }
+}
